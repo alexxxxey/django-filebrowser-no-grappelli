@@ -1,3 +1,8 @@
+FOR TINYMCE 4 ONLY
+==================
+Compatible with Tinymce 4 from https://github.com/vgaicuks/django-tinymce/tree/tinymce-4.0
+
+
 Django FileBrowser
 ==================
 
