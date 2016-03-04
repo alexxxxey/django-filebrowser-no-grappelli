@@ -153,6 +153,8 @@ def get_file_extensions(qs):
             for item in v:
                 if item:
                     extensions.append(item)
+
+    # import pdb; pdb.set_trace()
     return extensions
 
 register.simple_tag(get_file_extensions)

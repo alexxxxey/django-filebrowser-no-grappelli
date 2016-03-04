@@ -13,7 +13,7 @@
 <!-- JAVASCRIPTS -->
 {% block extrahead %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static "admin/js/jquery.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/vendor/jquery/jquery.min.js" %}"></script>
     <script type="text/javascript" src="{% static "admin/js/jquery.init.js" %}"></script>
     <script type="text/javascript" src="{% static "admin/js/collapse.min.js" %}"></script>
     <script type="text/javascript" src="../../jsi18n/"></script>
@@ -46,7 +46,10 @@
                           'csrf_xname': 'X-CSRFToken',
                           'folder': '{{ query.dir|escapejs }}', },
 
+                {% autoescape off %}
                 allowedExtensions: {% get_file_extensions request.GET %},
+                {% endautoescape %}
+
                 sizeLimit: {{ settings_var.MAX_UPLOAD_SIZE|unlocalize }},
                 minSizeLimit: 0,
                 debug: false,
